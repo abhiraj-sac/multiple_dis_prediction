@@ -16,7 +16,7 @@ heart_disease_model = pickle.load(open('model.pkl', 'rb'))
 # if selected == 'Heart':
 
     # page title
-st.title('Diabetes Prediction using ML')
+st.title('Heart Prediction of 10 Years')
 
     # getting the input data from the user
 col1, col2, col3 = st.columns(3)
@@ -66,6 +66,6 @@ with col3:
 
     # creating a button for Prediction
 
-if st.button('Diabetes Test Result'):
+if st.button('Heart Test Result'):
     pred = heart_disease_model.predict([[male, age, education, currentSmoker, cigsPerDay, BPMeds, prevalentStroke,prevalentHyp,diabetes,totChol,sysBP,diaBP,BMI,heartRate,glucose]])
     st.header(pred[0])
